@@ -4,14 +4,15 @@ import { StyleSheet, Text, View } from "react-native";
 // Amplify Configuration
 import { Amplify } from "@aws-amplify/core";
 import awsconfig from "./app/aws-exports";
+import Navigation from "./app/screens/navigation";
 Amplify.configure(awsconfig);
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <>
       <StatusBar style="auto" />
-    </View>
+      <Navigation />
+    </>
   );
 }
 
