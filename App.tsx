@@ -5,14 +5,15 @@ import { StyleSheet, Text, View } from "react-native";
 import { Amplify } from "@aws-amplify/core";
 import awsconfig from "./app/aws-exports";
 import Navigation from "./app/screens/navigation";
+import { ActivityProvider } from "./app/context";
 Amplify.configure(awsconfig);
 
 export default function App() {
   return (
-    <>
+    <ActivityProvider>
       <StatusBar style="auto" />
       <Navigation />
-    </>
+    </ActivityProvider>
   );
 }
 

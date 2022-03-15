@@ -23,7 +23,7 @@ type ActivityActor {
   profileImage: String
 }
 
-type Activity @model @auth(rules: [{allow: public}]) {
+type Activity @model @auth(rules: [{ allow: public }]) {
   id: ID!
   actor: ActivityActor
   verb: ActivityVerbs
@@ -31,4 +31,3 @@ type Activity @model @auth(rules: [{allow: public}]) {
   data: String
   status: ActivityStatus
 }
- 
