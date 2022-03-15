@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "AggFeedPortfolio",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/tmp/amplify-a35b799b-710e-46c3-9ca5-892065ec9d2d/amplify/backend/api/AggFeedPortfolio/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}
