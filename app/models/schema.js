@@ -123,8 +123,8 @@ export const schema = {
         "ActivityActor": {
             "name": "ActivityActor",
             "fields": {
-                "id": {
-                    "name": "id",
+                "actorID": {
+                    "name": "actorID",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -147,5 +147,5 @@ export const schema = {
             }
         }
     },
-    "version": "5453bbeb68157c889dc343e6e08394ec"
+    "version": "37ce2e23a7fdac69829ea945ebf93feb"
 };

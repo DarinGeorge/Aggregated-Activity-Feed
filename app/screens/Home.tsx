@@ -1,7 +1,12 @@
+import { DataStore } from "aws-amplify";
+import { format } from "date-fns";
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, SectionList } from "react-native";
 import { ActivityContext } from "../context";
+import { ActivityVerbs } from "../models";
+import { ActivityStatus } from "../models";
 import { Activity } from "../models";
+import uuid from "react-native-uuid";
 
 export default function ActivityModal() {
   const { getActivity } = React.useContext(ActivityContext);
@@ -20,9 +25,5 @@ export default function ActivityModal() {
     // Group the activity by the verb
   };
 
-  return (
-    <View>
-      <Text>{JSON.stringify(activity)}</Text>
-    </View>
-  );
+  return <SectionList sections={activity} />;
 }

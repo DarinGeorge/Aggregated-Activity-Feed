@@ -20,7 +20,7 @@ export enum ActivityVerbs {
 }
 
 export declare class ActivityActor {
-  readonly id?: string;
+  readonly actorID?: string;
   readonly alias?: string;
   readonly profileImage?: string;
   constructor(init: ModelInit<ActivityActor>);
