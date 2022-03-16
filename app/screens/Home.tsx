@@ -1,29 +1,26 @@
-import { DataStore } from "aws-amplify";
-import { format } from "date-fns";
+import { View, Text, StyleSheet, Button } from "react-native";
 import React from "react";
-import { View, Text, SectionList } from "react-native";
-import { ActivityContext } from "../context";
-import { ActivityVerbs } from "../models";
-import { ActivityStatus } from "../models";
-import { Activity } from "../models";
-import uuid from "react-native-uuid";
+import { useNavigation } from "@react-navigation/native";
+import { RootStackParamList } from "../../types";
 
-export default function ActivityModal() {
-  const { getActivity } = React.useContext(ActivityContext);
-  const [activity, setData] = React.useState<Activity[]>();
+export default function Home() {
+  const nav = useNavigation<RootStackParamList>();
 
-  React.useEffect(() => {
-    onMount();
-  }, []);
-
-  React.useEffect(() => {
-    // mark activity seen in backend
-  }, []);
-
-  const onMount = async () => {
-    await getActivity().then(setData);
-    // Group the activity by the verb
+  const onPress = () => {
+    nav.navigate("Activity");
   };
 
-  return <SectionList sections={activity} />;
+  return (
+    <View style={styles.container}>
+      <Button onPress={onPress} title="View Activity" />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

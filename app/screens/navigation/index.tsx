@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Screen Imports
 import Home from "../Home";
+import ActivityModal from "../ActivityModal";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,6 +14,12 @@ export default function Navigation() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
+
+        <Stack.Group
+          screenOptions={{ presentation: "modal", orientation: "portrait_up" }}
+        >
+          <Stack.Screen name="Activity" component={ActivityModal} />
+        </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
   );

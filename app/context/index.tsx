@@ -1,13 +1,16 @@
 import React from "react";
+import { SectionedActivity } from "../../types";
 import { Activity } from "../models";
 import userActivityMethods from "./activity";
 
 interface ActivityMethods {
   getActivity(): Promise<Activity[]>;
+  groupActivity(array: Activity[]): Promise<SectionedActivity[]>;
 }
 
 export const ActivityContext = React.createContext<ActivityMethods>({
   getActivity: async () => [],
+  groupActivity: async () => [],
 });
 
 interface AuthProps {
