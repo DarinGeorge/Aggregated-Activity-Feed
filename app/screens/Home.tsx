@@ -25,7 +25,7 @@ export default function Home() {
           ref={bellRef}
           source={bell}
           style={{ width: 300, height: 300 }}
-          speed={1.5}
+          speed={2}
         />
       </TouchableOpacity>
     </View>
