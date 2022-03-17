@@ -1,8 +1,9 @@
 import React from "react";
-import { SectionList, ListRenderItemInfo } from "react-native";
+import { SectionList, ListRenderItemInfo, View } from "react-native";
 import { ActivityContext } from "../context";
 import { GroupedActivity, SectionedActivity } from "../../types";
 import ActivityItem from "../components/containers/ActivityItem";
+import ActivityFooter from "../components/containers/ActivityFooter";
 
 export default function ActivityModal() {
   const { getActivity, groupActivity } = React.useContext(ActivityContext);
@@ -27,6 +28,15 @@ export default function ActivityModal() {
     return <ActivityItem {...{ item }} />;
   };
 
+  const ListFooterComponent = () => <ActivityFooter />;
+
   if (!activity) return null;
-  return <SectionList {...{ renderItem }} sections={activity} />;
+  return (
+    <View style={{ flex: 1, backgroundColor: "white" }}>
+      <SectionList
+        {...{ renderItem, ListFooterComponent }}
+        sections={activity}
+      />
+    </View>
+  );
 }
