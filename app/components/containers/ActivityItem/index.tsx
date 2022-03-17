@@ -110,17 +110,19 @@ export default class ActivityItem extends React.Component<
         if (singleUserAction) {
           return (
             <View style={styles.activityRow}>
-              <Avatar uri={images[0]} />
-              <View>
-                <Text style={styles.actionText}>
-                  {singleAction.actor?.alias} sent a new message.
-                </Text>
-                <Text style={styles.timeDistance}>
-                  {singleAction.createdAt &&
-                    formatDistanceToNow(new Date(singleAction.createdAt), {
-                      addSuffix: true,
-                    })}
-                </Text>
+              <View style={styles.left}>
+                <Avatar uri={images[0]} />
+                <View>
+                  <Text style={styles.actionText}>
+                    {singleAction.actor?.alias} sent a new message.
+                  </Text>
+                  <Text style={styles.timeDistance}>
+                    {singleAction.createdAt &&
+                      formatDistanceToNow(new Date(singleAction.createdAt), {
+                        addSuffix: true,
+                      })}
+                  </Text>
+                </View>
               </View>
               <View style={styles.btn}>
                 <Button onPress={() => null} title="VIEW" color="black" />

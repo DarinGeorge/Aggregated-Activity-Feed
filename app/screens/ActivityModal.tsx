@@ -25,7 +25,7 @@ export default function ActivityModal() {
   };
 
   const renderItem = ({ item }: ListRenderItemInfo<GroupedActivity>) => {
-    return <ActivityItem {...{ item }} />;
+    return <ActivityItem key={item.id} {...{ item }} />;
   };
 
   const ListFooterComponent = () => <ActivityFooter />;
