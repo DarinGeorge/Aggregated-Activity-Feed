@@ -9,7 +9,9 @@ export default function Home() {
   const nav = useNavigation<RootStackParamList>();
 
   React.useEffect(() => {
-    bellRef.current?.play();
+    setTimeout(() => {
+      bellRef.current?.play();
+    }, 100);
   }, []);
 
   const onPress = () => {
@@ -26,6 +28,7 @@ export default function Home() {
           source={bell}
           style={{ width: 300, height: 300 }}
           speed={2}
+          autoPlay
         />
       </TouchableOpacity>
     </View>

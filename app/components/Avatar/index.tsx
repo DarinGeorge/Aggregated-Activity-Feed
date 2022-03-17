@@ -16,6 +16,7 @@ export default function Avatar({ uri, disableBorders }: Props) {
           if (index < 3) {
             return (
               <Image
+                key={`image:${index}`}
                 source={{ uri }}
                 style={[
                   styles.multipleImages,
