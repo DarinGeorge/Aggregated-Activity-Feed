@@ -1,6 +1,8 @@
+// Package Imports
 import React from "react";
 import { View, Image } from "react-native";
 
+// Local Imports
 import { styles } from "./styles";
 
 interface Props {

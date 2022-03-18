@@ -1,5 +1,8 @@
+// Package Imports
 import React from "react";
 import { SectionList, ListRenderItemInfo, View } from "react-native";
+
+// Local Imports
 import { ActivityContext } from "../context";
 import { GroupedActivity, SectionedActivity } from "../../types";
 import ActivityItem from "../components/containers/ActivityItem";

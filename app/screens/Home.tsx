@@ -1,8 +1,11 @@
-import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
+// Package Imports
 import React from "react";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { RootStackParamList } from "../../types";
 import Lottie from "lottie-react-native";
+
+// Local Imports
+import { RootStackParamList } from "../../types";
 
 export default function Home() {
   const bellRef = React.useRef<Lottie>(null);

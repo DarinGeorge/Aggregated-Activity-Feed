@@ -1,11 +1,14 @@
-import { View, Text, Button } from "react-native";
+// Package Imports
 import React from "react";
+import { View, Text, Button } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
+import { formatDistanceToNow } from "date-fns";
+
+// Local Imports
 import { GroupedActivity } from "../../../../types";
 import { Activity, ActivityActor, ActivityVerbs } from "../../../models";
 import { styles } from "./styles";
 import Avatar from "../../Avatar";
-import { FontAwesome } from "@expo/vector-icons";
-import { formatDistanceToNow } from "date-fns";
 
 interface ActivityItemProps {
   item: GroupedActivity;

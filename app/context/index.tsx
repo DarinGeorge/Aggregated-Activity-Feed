@@ -1,4 +1,7 @@
+// Package Imports
 import React from "react";
+
+// Local Imports
 import { SectionedActivity } from "../../types";
 import { Activity } from "../models";
 import userActivityMethods from "./activity";

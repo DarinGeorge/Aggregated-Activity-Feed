@@ -1,11 +1,10 @@
 // Package Imports
 import { DataStore, SortDirection } from "aws-amplify";
-import { GroupedActivity, SectionedActivity } from "../../types";
-import { ActivityStatus } from "../models";
+import uuid from "react-native-uuid";
 
 // Local Imports
-import { Activity } from "../models";
-import uuid from "react-native-uuid";
+import { Activity, ActivityStatus } from "../models";
+import { GroupedActivity, SectionedActivity } from "../../types";
 
 export default function userActivityMethods() {
   const getActivity = async () => {

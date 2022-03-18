@@ -13,7 +13,7 @@ export default function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="You have new activity!" component={Home} />
 
         <Stack.Group
           screenOptions={{ presentation: "modal", orientation: "portrait_up" }}

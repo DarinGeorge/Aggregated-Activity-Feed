@@ -1,8 +1,11 @@
-import { View, Text } from "react-native";
+// Package Imports
 import React from "react";
+import { View, Text } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { styles } from "./styles";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+
+// Local Imports
+import { styles } from "./styles";
 
 export default function ActivityFooter() {
   const { bottom } = useSafeAreaInsets();
