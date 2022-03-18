@@ -1,12 +1,18 @@
 // Package Imports
 import React from "react";
-import { SectionList, ListRenderItemInfo, View } from "react-native";
+import {
+  SectionList,
+  ListRenderItemInfo,
+  View,
+  StyleSheet,
+} from "react-native";
 
 // Local Imports
 import { ActivityContext } from "../context";
 import { GroupedActivity, SectionedActivity } from "../../types";
 import ActivityItem from "../components/containers/ActivityItem";
 import ActivityFooter from "../components/containers/ActivityFooter";
+import { Activity } from "../models";
 
 export default function ActivityModal() {
   const { getActivity, groupActivity } = React.useContext(ActivityContext);
@@ -17,7 +23,7 @@ export default function ActivityModal() {
   }, []);
 
   React.useEffect(() => {
-    // mark activity seen in backend
+    // TODO: Next feature - mark activity seen in backend
   }, []);
 
   const onMount = async () => {
@@ -33,13 +39,19 @@ export default function ActivityModal() {
 
   const ListFooterComponent = () => <ActivityFooter />;
 
+  const keyExtractor = (item: Activity) => item.id;
+
   if (!activity) return null;
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={styles.sectionContainer}>
       <SectionList
-        {...{ renderItem, ListFooterComponent }}
+        {...{ renderItem, ListFooterComponent, keyExtractor }}
         sections={activity}
       />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  sectionContainer: { flex: 1, backgroundColor: "white" },
+});
