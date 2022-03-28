@@ -4,7 +4,7 @@ This is an Aggregated Feed Demo App.
 
 Notable Features:
 
-- SectionList Support
+- Reusable Components for future projects
 - Amplify Integration with DynamoDB
 - Expandable switch cases for adaptability
 
